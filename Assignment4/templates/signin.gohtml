@@ -1,0 +1,17 @@
+{{template "header" .}}
+
+<h1>Sign In</h1>
+
+{{template "nav-main"}}
+
+<form action= "/signin" method="post">
+    <label for="fnm" >First name</label>
+    <input type= "text" name= "fname" id= "fnm">
+    <input type= "submit">
+</form>
+
+{{if .FirstName}}
+Your name is {{.FirstName}} <!-- dot represent a struct, piece of data/string -->
+{{end}}
+
+{{template "footer"}}
